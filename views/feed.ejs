@@ -1,0 +1,19 @@
+<% include ./partials/header.ejs%>
+<div class="h-[100vh] w-full bg-zinc-800 pt-[4vw] px-12 text-white flex">
+  <div class="flex gap-[2vw]">
+    <% posts.forEach(post =>{ %>
+    <div class="pins mt-[5vw]">
+      <div class="w-[12vw] h-[22vh] rounded-lg bg-white overflow-hidden">
+        <img
+          class="h-full w-full object-cover"
+          src="/images/uploads/<%= post.image %>"
+          alt=""
+        />
+      </div>
+      <h1 class="text-xl mt-2"><%= post.title %></h1>
+      <h6 class="opacity-70"><%= post.user.username %></h6>
+    </div>
+    <%}) %>
+  </div>
+</div>
+<% include ./partials/footer.ejs%>

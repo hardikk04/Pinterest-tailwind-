@@ -1,0 +1,42 @@
+<% include ./partials/header.ejs%>
+<div class="h-[100vh] w-full flex justify-center items-center bg-zinc-800">
+  <div class="w-[26vw] bg-zinc-200 rounded-lg px-12 py-12">
+    <h1 class="text-3xl text-center font-[600] text-red-500">
+      Welcome to Pinterest
+    </h1>
+    <form action="/login" method="post" class="mt-5 text-black">
+      <label class="block w-full mt-2" for="username">Username</label>
+      <input
+        class="block w-full px-2 py-1 rounded-md"
+        type="text"
+        name="username"
+        placeholder="Username"
+        id="username"
+      />
+      <label class="block w-full mt-2" for="password">Password</label>
+      <input
+        class="block w-full px-2 py-1 rounded-md"
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+      />
+      <a href="/" class="mt-2 block">Forgot your password? </a>
+      <p class="text-red-500 text-center mt-2"><%= error %></p>
+      <button
+        type="submit"
+        class="w-full bg-red-500 text-white mt-4 py-1 rounded-md"
+      >
+        Login
+      </button>
+    </form>
+    <p class="mt-5 leading-none opacity-70 text-center">
+      By continuing, you agree to Pinterest's Opens a new tab and acknowledge
+      you've read our Opens a new tab. Notice at Opens a new tab.
+    </p>
+    <a href="/" class="mt-5 text-center block"
+      >Not on Pinterest yet? Sign up</a
+    >
+  </div>
+</div>
+<% include ./partials/footer.ejs%>
